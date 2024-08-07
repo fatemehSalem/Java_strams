@@ -14,6 +14,7 @@ public class GroupingData {
     public static void simpleGrouping() throws Exception {
         Map<String, List<Car>> map = MockData.readCarJson()
                 .stream()
+                .filter(car -> car.getPrice() > 87991)
                 .collect(Collectors.groupingBy(Car::getMake));
         map.forEach((s, cars) -> {
             System.out.println("Make " + s);

@@ -37,14 +37,11 @@ public class SolvingQuestions {
         return true;
     }
 
-    public static void primeNumber(){
-        int n = 30;
-        List<Integer> primeNumbers = IntStream.range(2, n)
+    public static void primeNumber(int number){
+        List<Integer> primeNumbers = IntStream.range(0, number)
                 .filter(SolvingQuestions::isPrime)
-                .boxed()
-                .collect(Collectors.toList());
-
-        System.out.println(primeNumbers);
+                .boxed().toList();
+        primeNumbers.forEach(System.out::println);
     }
 
     //Q4: Given a list of strings, group the strings by their length. Return a map where the keys are the lengths and

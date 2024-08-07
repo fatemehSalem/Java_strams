@@ -4,7 +4,7 @@ public class RunnableClass {
     public static void main(String[] args) {
 
         try {
-            SolvingQuestions.findMaxNumber();
+            SolvingQuestions.primeNumber(12);
         } catch (Exception e) {
             e.printStackTrace();
         }
